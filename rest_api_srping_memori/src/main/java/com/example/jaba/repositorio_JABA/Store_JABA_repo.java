@@ -15,6 +15,9 @@ public class Store_JABA_repo {
         return store;
     }
 
-    
+    // Read
+    public List<Store_JABA> findAll() {
+        return store_jabaList;
+    }
 
 }
