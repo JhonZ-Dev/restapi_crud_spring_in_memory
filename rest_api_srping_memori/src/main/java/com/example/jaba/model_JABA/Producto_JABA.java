@@ -9,6 +9,6 @@ public class Producto_JABA {
     private Integer DepartamentoId;
     private String nombre;
     private Double precio;
-    
+
 
 }
