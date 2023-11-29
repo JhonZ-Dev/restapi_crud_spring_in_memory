@@ -10,11 +10,9 @@ import java.util.Optional;
 public class Custumer_JABA_repo {
 
     private final List<Custumer_JABA> customerList = new ArrayList<>();
-    private int nextCustomerId = 1;
 
     // Create
     public Custumer_JABA save(Custumer_JABA customer) {
-        customer.setCustomerId(nextCustomerId++);
         customerList.add(customer);
         return customer;
     }
