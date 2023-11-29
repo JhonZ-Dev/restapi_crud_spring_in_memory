@@ -26,6 +26,22 @@ public class Store_JABA_repo {
                 .filter(store -> store.getStoreId() == storeId)
                 .findFirst();
     }
-    
+    // Update
+    public Optional<Store_JABA> update(int storeId, Store_JABA updatedStore) {
+        for (int i = 0; i < store_jabaList.size(); i++) {
+            Store_JABA store = store_jabaList.get(i);
+            if (store.getStoreId() == storeId) {
+                updatedStore.setStoreId(storeId);
+                store_jabaList.set(i, updatedStore);
+                return Optional.of(updatedStore);
+            }
+        }
+        return Optional.empty();
+    }
+
+    // Delete
+    public boolean delete(int storeId) {
+        return store_jabaList.removeIf(store -> store.getStoreId() == storeId);
+    }
 
 }
