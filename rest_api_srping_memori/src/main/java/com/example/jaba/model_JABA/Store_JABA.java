@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class Store_JABA {
-    private int storeId;
+    private Long storeId;
     private String storeName;
 
 }
