@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class Store_JABA_repo {
@@ -19,5 +20,12 @@ public class Store_JABA_repo {
     public List<Store_JABA> findAll() {
         return store_jabaList;
     }
+//encontrar por ID
+    public Optional<Store_JABA> findById(int storeId) {
+        return store_jabaList.stream()
+                .filter(store -> store.getStoreId() == storeId)
+                .findFirst();
+    }
+    
 
 }
